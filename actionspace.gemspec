@@ -3,7 +3,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "actionspace/version"
 
 Gem::Specification.new do |spec|
-  spec.name        = 'pattern_patch'
+  spec.name        = 'actionspace'
   spec.version     = ActionSpace::VERSION
   spec.summary     = "Group Fastlane actions into namespaces"
   spec.description = "More to come"
