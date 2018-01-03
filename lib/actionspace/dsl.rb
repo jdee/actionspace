@@ -32,7 +32,8 @@ module ActionSpace
       space.runner = runner
 
       # 3. Define a method to get the ActionSpace.
-      self.class.send :define_method, (as || name).to_sym do
+      # TODO: This applies to all instances of the class. Revisit this.
+      self.class.send :define_method, as || name do
         space
       end
 

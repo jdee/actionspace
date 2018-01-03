@@ -35,7 +35,7 @@ module ActionSpace
 
     def method_missing(method_sym, *args, &b)
       action_sym = actions[method_sym]
-      return super unless action_sym
+      return super unless action_sym && runner
 
       # now trigger the action on the runner
       runner.trigger_action_by_name(action_sym, nil, false, *args)
